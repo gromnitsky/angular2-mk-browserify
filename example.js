@@ -2,7 +2,7 @@
 'use strict';
 
 let Example = ng.core.Component({
-    selector: 'my-app',
+    selector: 'example',
     template: `
 <h1>{{ pkg?.name }} {{ pkg?.version }}</h1>
 <p>
