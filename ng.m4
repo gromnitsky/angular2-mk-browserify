@@ -3,7 +3,7 @@ dnl Angular 2.0.0-rc1
 
 require('zone.js')
 require('reflect-metadata')
-require('rxjs')
+global.Rx = require('rxjs/Rx')
 
 var ng = {}
 ng.core = require('@angular/core')
