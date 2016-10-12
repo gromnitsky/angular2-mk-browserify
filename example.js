@@ -21,8 +21,18 @@ Browserify: {{ pkg?.dependencies?.browserify }}<br>
     }]
 })
 
+// I don't even.
+let ExampleModule = ng.core.NgModule({
+    imports: [ng.platformBrowser.BrowserModule, ng.http.HttpModule],
+    declarations: [ Example ],
+    bootstrap: [ Example ],
+}).Class({
+    constructor: function() {}
+})
+
 let boot = function() {
-    ng.platformBrowserDynamic.bootstrap(Example, [ng.http.HTTP_PROVIDERS])
+    ng.platformBrowserDynamic.platformBrowserDynamic()
+	.bootstrapModule(ExampleModule);
 }
 
 if (document.readyState === "loading") {
